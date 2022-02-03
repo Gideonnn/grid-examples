@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>05 Grid exercise</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .border {
+        border: 3px solid black;
+      }
+
+      .container {
+        display: grid;
+        grid-template-rows: auto auto auto;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          "top"
+          "middle"
+          "bottom";
+        grid-gap: 20px 10px;
+        padding: 10px;
+      }
+
+      .header {
+        grid-area: top;
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        grid-template-rows: 1fr;
+        grid-template-areas: "left middle right";
+        padding: 0 10px;
+        height: 50px;
+      }
+
+      .logo {
+        grid-area: left;
+        display: grid;
+        align-items: center;
+      }
+
+      .nav {
+        grid-area: right;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .content {
+        grid-area: middle;
+        padding: 10px;
+      }
+
+      .footer {
+        grid-area: bottom;
+        display: grid;
+        justify-items: center;
+        padding: 10px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="border header">
+        <div class="logo">Logo</div>
+        <div class="nav">
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+        </div>
+      </div>
+      <div class="border content">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt,
+        obcaecati, consequuntur minus sit voluptate optio necessitatibus
+        dignissimos placeat accusantium magni reprehenderit impedit nam quaerat?
+        Tempora, quas modi! Dolores, pariatur cumque.
+      </div>
+      <div class="border footer">Copyright &copy; 2022</div>
+    </div>
+  </body>
+</html>

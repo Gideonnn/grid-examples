@@ -1,0 +1,13 @@
+{
+  "name": "grid-examples",
+  "version": "1.0.0",
+  "description": "Some examples showing CSS grid",
+  "author": "Gideon Spierings",
+  "license": "WTFPL",
+  "scripts": {
+    "start": "http-server"
+  },
+  "dependencies": {
+    "http-server": "^14.1.0"
+  }
+}
